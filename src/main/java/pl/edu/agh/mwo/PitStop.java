@@ -1,12 +1,25 @@
 package pl.edu.agh.mwo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PitStop {
 
+    @JsonProperty("session_key")
     private int sessionKey;
+
+    @JsonProperty("meeting_key")
     private int meetingKey;
+
+    @JsonProperty("date")
     private String date;
+
+    @JsonProperty("driver_number")
     private int driverNumber;
+
+    @JsonProperty("pit_duration")
     private double pitDuration;
+
+    @JsonProperty("lap_number")
     private int lapNumber;
 
     public int getSessionKey() {
