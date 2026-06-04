@@ -10,10 +10,10 @@ public class PitStopPrinter {
             PitStopStatistics statistics) {
 
         switch (statisticType) {
-            case "number":
+            case "pitStopNumber":
                 System.out.println("Number of pit stops: " + statistics.countPitStops(pitStops));
                 break;
-            case "longest":
+            case "longestLap":
                 PitStop longestPitStop = statistics.findLongestPitStop(pitStops);
                 System.out.println("Longest pit stop: " + longestPitStop.getPitDuration()
                         + " seconds, driver " + longestPitStop.getDriverNumber());
@@ -26,7 +26,7 @@ public class PitStopPrinter {
                 System.out.println("Last pit stop lap: " + statistics.findLastLap(pitStops));
                 break;
             default:
-                System.out.println("Invalid statistic type. Available values: count, average, longest, first&last");
+                System.out.println("Invalid statistic type. Available values: pitStopNumber, average, longest, first&last");
         }
     }
 }
